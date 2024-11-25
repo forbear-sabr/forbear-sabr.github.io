@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { type CollectionEntry ,getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const bearEntry = await getCollection('bear');
+    return bearEntry.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+    }));
+}
+
+type Props = CollectionEntry<'bear'>;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout pagetitle={entry.data.title}>
+        <div class="ctn-intro">
+            <h1>{entry.data.title}</h1>
+        </div>
+        <div>
+            <Content />
+        </div>
+</BaseLayout>

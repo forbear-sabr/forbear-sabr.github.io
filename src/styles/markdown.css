@@ -1,0 +1,98 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Oswald:wght@200..700&family=Poiret+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+p {
+    line-height: 1.5;
+    margin: 20px auto;
+    word-wrap: break-word;
+}
+
+p * {
+    line-height: 1em;
+}
+
+strong {
+    font-family: 700;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+li {
+    margin: 10px 0;
+    line-height: 1.4;
+}
+li * {
+    line-height: 1em;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    text-decoration: none !important;
+    word-wrap: break-word;
+    word-spacing: normal;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* Code */
+code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+p code {
+    font-size: 0.7em;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #212121;
+    border: 1px solid #222222;
+    padding: 5px 4px;
+}
+
+pre {
+    display: block;
+    background-color: #212121;
+    overflow-y: hidden;
+    overflow-x: auto;
+    font-size: 14px;
+    padding: 15px;
+    color: #f8f8f2;
+    line-height: 1.4;
+    margin: 30px auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+pre code {
+    font-size: 14px;
+}

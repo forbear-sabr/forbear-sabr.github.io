@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const allBear = await getCollection('bear');
+---
+
+<BaseLayout pagetitle="Home">
+    <div class="ctn-home">
+        <div class="ctn">
+            <div class="ctn-card">
+                {
+                    allBear.map(b => (
+                        <div class="ctn-title">
+                            <a href={b.slug}>{b.data.title}</a>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .ctn-card {
+        background-color: #181818;
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    }
+</style>
