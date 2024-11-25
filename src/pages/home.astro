@@ -12,7 +12,7 @@ const allBear = await getCollection('bear');
                 {
                     allBear.map(b => (
                         <div class="ctn-title">
-                            <a href={b.slug}>{b.data.title}</a>
+                            <a href={`/home/${b.slug}`}>{b.data.title}</a>
                         </div>
                     ))
                 }
