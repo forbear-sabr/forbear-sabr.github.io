@@ -14,8 +14,19 @@ const {pagetitle} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
         <!-- Google Adsense -->
         <meta name="google-adsense-account" content="ca-pub-8546995543585264">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8546995543585264"
+        <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8546995543585264"
      crossorigin="anonymous"></script>
+     		<!-- Google tag (gtag.js) -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2X7ZSH8063"></script>
+<script is:inline type="text/partytown">
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){
+		window.dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+  
+	gtag('config', 'G-2X7ZSH8063');
+  </script>
 		<title>{pagetitle}</title>
 	</head>
     <body>
