@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GoogleAdsense from "../component/GoogleAdsense.astro";
 import { getCollection } from "astro:content";
 
 const allBear = await getCollection('bear');
@@ -19,6 +20,7 @@ const allBear = await getCollection('bear');
             </div>
         </div>
     </div>
+    <GoogleAdsense />
 </BaseLayout>
 
 <style>
