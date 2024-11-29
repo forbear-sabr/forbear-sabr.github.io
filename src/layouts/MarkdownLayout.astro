@@ -4,13 +4,13 @@ import '../styles/markdown.css';
 import Header from "../component/Header.astro";
 import Footer from "../component/Footer.astro";
 import Head from '../component/Head.astro';
-const {pagetitle} = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<Head />
-		<title>{pagetitle}</title>
+		<title>{frontmatter.title}</title>
 	</head>
     <body>
         <Header />
