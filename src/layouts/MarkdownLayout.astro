@@ -10,6 +10,15 @@ const { frontmatter } = Astro.props;
 <html lang="en">
 	<head>
 		<Head />
+        <!-- Google tag (gtag.js) -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-J0HNPGTN0C"></script>
+        <script is:inline type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J0HNPGTN0C');
+        </script>
 		<title>{frontmatter.title}</title>
 	</head>
     <body>
@@ -21,10 +30,3 @@ const { frontmatter } = Astro.props;
     </body>
 </html>
 
-<script is:inline type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-J0HNPGTN0C');
- </script>
