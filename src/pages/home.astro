@@ -6,28 +6,51 @@ const allBear = await getCollection('bear');
 ---
 
 <BaseLayout pagetitle="Home">
-    <div class="ctn-home">
-        <div class="ctn">
-            <div class="ctn-card">
-                {
-                    allBear.map(b => (
-                        <div class="ctn-title">
-                            <a href={`/home/${b.slug}`}>{b.data.title}</a>
+    <div class="main">
+        <div class="hero">
+            <h1>Latest feed</h1>
+        </div>
+        <div id="ctn-feed">
+            {
+                allBear.map(b => (
+                    <div class="ctn-card">
+                        <div class="card">
+                            <div class="card-txt">
+                                <a href={`/home/${b.slug}`}>
+                                    <h4>{b.data.title}</h4>
+                                </a>
+                            </div>
                         </div>
-                    ))
-                }
-            </div>
+                    </div>
+                ))
+            }
         </div>
     </div>
 </BaseLayout>
 
 <style>
-    .ctn-card {
-        background-color: #181818;
-        width: 200px;
-        padding: 20px;
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poiret+One&family=Truculenta:opsz,wght@12..72,100..900&family=Unica+One&display=swap');
+
+    .hero h1{
+        font-size: 2rem;
+        font-family: var(--font-headings);
+        text-transform: uppercase;
         text-align: center;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        letter-spacing: 4px;
+        line-height: 2;
     }
+    #ctn-feed {
+        margin: 10px 0;
+        padding: 20px;
+    }
+    .ctn-card {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        padding: 16px;
+    }
+
+    .card-txt h4 {
+        margin: 0;
+        font-family: "Poiret One", sans-serif;
+    }
+    
 </style>

@@ -15,9 +15,22 @@ const { frontmatter } = Astro.props;
     <body>
         <Header />
         <main>
+            <div class="frontmatter">
+                <h1>{frontmatter.title}</h1>
+            </div>
             <slot />
         </main>
         <Footer />
     </body>
 </html>
+
+<style>
+    .frontmatter {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+        line-height: 2;
+        font-size: 3rem;
+    }
+</style>
 

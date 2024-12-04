@@ -1,11 +1,18 @@
 ---
-
+import github from '../../public/icons/github.png'
+import youtube from '../../public/icons/youtube.png'
+import rss from '../../public/icons/rss.png'
 ---
 
-<!-- <div class="social">
-    <li>
-        <a href="">
-            <img src="" alt="">
-        </a>
-    </li>
-</div> -->
+<div class="media">
+    <img src={youtube.src} alt="youtube" width="36">
+    <img src={github.src} alt="github" width="36">
+    <img src={rss.src} alt="rss" width="36">
+</div>
+
+<style>
+    .media {
+        display: inline-flex;
+        gap: 10px;
+    }
+</style>
