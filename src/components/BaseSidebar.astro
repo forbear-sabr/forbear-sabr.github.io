@@ -1,0 +1,95 @@
+---
+import { getCollection } from "astro:content";
+import HdrLink from "./HdrLink.astro";
+import TabSidebar from "./TabSidebar.astro";
+
+const html = await getCollection('html');
+---
+
+<aside id="sidebar">
+    <nav id="sidebar-ctn">
+        <ul class="sidebar-item">
+            <li class="side-item">
+                <HdrLink href="/" class="side-link">
+                    <span class="material-symbols-outlined icon">dashboard</span>
+                    <span class="side text">dashboard</span>
+                </HdrLink>
+            </li>
+        </ul>
+        <ul class="sidebar-item">
+           {
+                html.map(htm => 
+                    <TabSidebar href={`/html/${htm.id}`} tag={htm.data.tag} text={htm.data.title} />
+                )
+           }
+        </ul>
+    </nav>
+</aside>
+
+<style>
+    ol,
+    ul {
+        margin: 0;
+
+    }
+    #sidebar {
+        width: 240px;
+        border: 1px solid var(--border-clr--);
+
+        position: fixed;
+    }
+
+    #sidebar-ctn {
+        padding: 20px;
+    }
+
+    .side-item {
+        height: 41px;
+        list-style: none;
+    }
+
+    .side-link {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+    }
+
+    .icon {
+        padding: 8px;
+        border: 1px solid var(--border-clr--);
+        text-align: center;
+    }
+
+    .side-link {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+    }
+
+    .icon {
+        padding: 8px;
+        border: 1px solid var(--border-clr--);
+        text-align: center;
+    }
+
+    .code {
+        padding: 10px;
+        border: 1px solid var(--border-clr--);
+        /* text-align: center; */
+    }
+
+    .text {
+        padding: 10px;
+        border: 1px solid var(--border-clr--);
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    #sidebar-header {
+        height: 20px;
+        margin: 12px 0 4px 12px;
+
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+</style>

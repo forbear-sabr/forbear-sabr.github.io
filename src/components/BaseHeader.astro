@@ -1,0 +1,88 @@
+---
+import logo from '../assets/logo/logo.png';
+import HdrLink from './HdrLink.astro';
+---
+
+<header>
+    <div id="header">
+        <nav id="logo">
+            <HdrLink href="/" class="logo-link">
+                <img src={logo.src} alt="forbear-sabr" width={26}>
+                <h2>forbear</h2>
+            </HdrLink>
+        </nav>
+        <nav id="hdr-nav">
+            <li class="hdr-item">
+                <HdrLink href="503" class="hdr-link">home</HdrLink>
+            </li>
+            <li class="hdr-item">
+                <HdrLink href="503" class="hdr-link">about us</HdrLink>
+            </li>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        padding: 5px 0;
+        background-color: var(--bg-clr--);
+
+        position: sticky;
+        top: 0;
+    }
+
+    #header {
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    /** menu */
+
+    #hdr-nav {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hdr-link {
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        padding: 5px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    /** Media Quries */
+
+    @media screen and (max-width: 1200px) {
+        #header {
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+        }
+        
+        #wrapper {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+</style>

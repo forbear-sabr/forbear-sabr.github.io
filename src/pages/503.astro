@@ -1,0 +1,37 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import BaseHeader from "../components/BaseHeader.astro";
+import BaseFooter from "../components/BaseFooter.astro";
+
+interface Props {
+    error: unknown
+}
+
+const { error } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <BaseHead title="503 Page" />
+</head>
+<body>
+    <BaseHeader />
+    <div id="wrapper">
+        <div id="pageError">
+            {error instanceof Error ? error.message : 'Unknown error'}
+        </div>
+    </div>
+    <BaseFooter />
+</body>
+</html>
+
+<style>
+    #pageError {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px;
+        
+    }
+</style>
+

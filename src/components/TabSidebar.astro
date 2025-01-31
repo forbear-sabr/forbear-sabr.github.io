@@ -1,0 +1,58 @@
+---
+import HdrLink from "./HdrLink.astro";
+
+const { tag , text, href} = Astro.props;
+---
+
+<div id="sidebar-header">html element</div>
+    <li class="side-item">
+        <HdrLink href={href} class="side-link">
+            <span class="side code">{tag}</span>
+            <span class="side text">{text}</span>
+        </HdrLink>
+    </li>
+
+<style>
+    li {
+        list-style: none;
+    }
+    .side-link {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        align-items: center;
+    }
+
+    .icon {
+        height: 41px;
+        padding: 8px;
+        border: 1px solid var(--border-clr--);
+        text-align: center;
+    }
+
+    .code {
+        height: 41px;
+        padding: 10px 0 10px 0;
+        border: 1px solid var(--border-clr--);
+
+        font-family: 'Source Code Pro';
+        text-align: center;
+    }
+
+    .text {
+        height: 41px;
+        padding: 10px;
+        border: 1px solid var(--border-clr--);
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    #sidebar-header {
+        height: 20px;
+        margin: 30px 0 4px 12px;
+
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+</style>
