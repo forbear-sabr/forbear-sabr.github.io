@@ -1,26 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import FormatDate from '../components/FormatDate.astro';
 
 const allPost = await getCollection('post');
 ---
 
 <Layout>
-	<h2>Latest Post</h2>
+	<h1>Forbear</h1>
 	{
 		allPost.map(x => (
 			<li>
-				<a href={`/post/${x.id}`}>{x.data.title}</a> . <FormatDate date={x.data.pubDate} />
+				<a href={`/post/${x.id}`}>{x.data.title}</a>
 			</li>
 		))
 	}
 </Layout>
-
-<style>
-	li {
-		border: 1px solid;
-		padding: 15px 10px;
-		margin-top: 10px;
-	}
-</style>

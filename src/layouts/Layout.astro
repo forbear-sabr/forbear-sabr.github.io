@@ -1,7 +1,5 @@
 ---
-import '../style/styles.css';
-import '../style/markdown.css';
-import Header from "../components/Header.astro";
+import '../styles/styles.css';
 ---
 
 <!doctype html>
@@ -15,9 +13,11 @@ import Header from "../components/Header.astro";
 		<title>forbear</title>
 	</head>
 	<body>
-		<Header />
 		<div id="wrapper">
-			<slot />
+			<section id="content">
+				<slot />
+			</section>
+			<footer>&copy; 2025 forbear</footer>
 		</div>
 	</body>
 </html>

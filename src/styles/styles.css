@@ -1,0 +1,135 @@
+:root {
+    --main-color-- : #EF233C;
+    --color-- : #212529;
+    --background-clr : #f8f9fa;
+    --th-border-- : #e9ecef;
+    --border-- : #CED4DA;
+    --footer-- : #6c757d;
+}
+
+body {
+    max-width: 100%;
+    max-height: 100vh;
+    background-color: var(--background-clr);
+
+    color: var(--color--);
+    font-size: 1em; /* default 16px */
+    font-family: sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#wrapper {
+    padding: 25px 25px 0px 25px;
+}
+
+
+h1 {
+    font-size: 2.25em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: 700;
+}
+
+ol , ul {
+    margin: 0;
+    padding: 0 0 10px 25px;
+}
+
+li {
+    line-height: 2;
+}
+
+code {
+    padding: 4px 5px;
+    border-radius: 5px;
+    color: #f8f9fa;
+    background-color: #343a40;
+}
+
+pre > code {
+    background-color: #24292e;
+}
+
+pre {
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+
+    display: block;
+    font-size: 1em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+
+    /* Media Quries */
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+a {
+    color: var(--main-color--);
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border--);
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid var(--border--);
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+th {
+    background-color: var(--th-border--);
+    color: #343a40;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+blockquote {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    margin: 0;
+    padding: 5px 20px;
+}
+
+footer {
+    padding: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    color: var(--footer--);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
